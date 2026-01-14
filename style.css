@@ -19,6 +19,25 @@ input {
   overflow: hidden;
 }
 
+#toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 14px 22px;
+  background: #111;
+  color: #fff;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+#toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .forms-container {
   position: absolute;
   width: 100%;
