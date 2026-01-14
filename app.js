@@ -20,3 +20,11 @@ document.querySelectorAll("[data-loading]").forEach(btn => {
     }, 500);
   });
 });
+
+function notify(msg) {
+  const toast = document.getElementById("toast");
+  toast.textContent = msg;
+  toast.classList.add("show");
+
+  setTimeout(() => toast.classList.remove("show"), 2500);
+}
