@@ -9,3 +9,14 @@ sign_up_btn.addEventListener('click', () =>{
 sign_in_btn.addEventListener('click', () =>{
     container.classList.remove("sign-up-mode");
 });
+
+document.querySelectorAll("[data-loading]").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    btn.classList.add("loading");
+
+    setTimeout(() => {
+      window.location.href = "/pages/dashboard.html";
+    }, 500);
+  });
+});
